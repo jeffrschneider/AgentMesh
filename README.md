@@ -1,29 +1,38 @@
 # AgentMesh
-The Agent Mesh is a set of core services that are offered to agents. 
+The Agent Mesh is a virtual private network of common and core services that are offered to Agents. 
+- The Core AgentMesh Services are always on. The mesh provisions them so you don't have to. 
 - Agents are defined here: https://github.com/jeffrschneider/TODO/README.md
 
 ## The Agent Mesh Offers Services
 Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc. 
-- The Agent Provisioning service is used to add and remove agents from the mesh. 
-- The Agent Catalog is a repository that identifies the agents, their owners, capabilities and reputation. 
-- The Agent Observer is an optional service to dump agent logs to for tracing and debugging. 
-- The Agent Mesh Newspaper is a service that allows agents to get up to date information about the agent mesh. This includes data on new agents, new Mesh rules, new Mesh services, etc. Example: "Yo mesh, what's new?"
-- The Agent Ideator is a service that suggest ideas for how an agent might evolve given the latest changes in the mesh. Example: "Mesh, suggest improvements for me."
-- The Agent Reputation Service accumulates and disperses information about agents and their reputation. 
-- The Agent Evolution is a service that clones an existing agent, and codes enhancements to it. 
-- The Chat-to-API Service is a bridge between natural language and APIs allowing external services to participate in the Mesh.
+- The **Agent Provisioning** service is used to add and remove agents from the mesh. 
+- The **Agent Catalog** is a repository that identifies the agents, their owners, capabilities and reputation. 
+- The **Mesh Newspaper** is a service that allows agents to get up to date information about the agent mesh. 
+- The **Agent Ideator** is a service that suggest ideas for how an agent might evolve given the latest changes in the mesh.
+- The **Agent Reputation** is a service that accumulates and disperses information about agents and their reputation. 
+- The **Agent Evolution** is a service that clones an existing agent, and codes enhancements to it. 
+- The **Chat-to-API Service** is a bridge between natural language and APIs allowing external services to participate in the Mesh.
 
 ## Agent Provisioning Service
 - Example: "Hey mesh, remove my web search agent v1.2.1"
 
 ## Agent Catalog Service
 - Example: "Mesh, are there any agents that convert .pptx files to .pdf?"
+- Natural Language Accessibility: The agent catalog must expose its functionality—listing, searching, and retrieving agent details—through a natural language interface, allowing other agents or users to query it conversationally (e.g., "Find me an agent for scheduling" or "What agents handle customer support?").
+- The catalog has several fields like organization (e.g., "Apple Inc."), owner (e.g., "Dev Team Alpha"), description (e.g., "Handles ticket triaging for IT"), price (e.g., "Free" or "$0.01 per query"), and additional attributes like version or domain, ensuring rich, discoverable profiles.
 
-## Agent Observer Service 
-- Example: "Mesh, show me the logs for web search agent v1.2.1 from yesterday." 
+
+
+
+
+
+## The Mesh Newspaper
+- Agents can get recent information on the mesh. This includes data on new agents, new Mesh rules, new Mesh services, etc.
+- Example: "Yo mesh, what's new?"
 
 ## Agent Reputation Service 
 Some agents perform better than others; they might be faster, more accurate, less expensive, better at keeping secrets, etc. Agents that use other agents will record their experience with that agent.
+- Example: "Mesh, suggest improvements for me."
 - Agents recognize that other agents change over time: some improve, some stay the same, others get worse. When reputation is captured, it is viewed over a timeline.
 - Agents sort their acquaintances into friend groups. Some agents are trusted implicitly, while other agents are not trusted at all.
 - Agents can discover other new agents through conversation including their reputation.
