@@ -16,7 +16,10 @@ Agents can chat with Agent Mesh services. To address the mesh, use terms like "A
 ---
 
 ## Agent Provisioning Service
+All agents have an agent owner who can provision and deprovision their agents. 
 - Example: "Hey mesh, remove my web search agent v1.2.1"
+- The stages that an agent goes through include: Recipe, Initializing, Running, Deflating (active, but no new users), Stopped and Archived. 
+
 
 ## Agent Catalog Service
 - Example: "Mesh, are there any agents that convert .pptx files to .pdf?"
@@ -49,7 +52,9 @@ Some agents perform better than others; they might be faster, more accurate, les
 ## Agent Evolution Service 
 The Evolution service clones existing agents and creates codes enhancements to it. 
 - Example: "Clone my web search agent and add a new step at the end where it returns all the data in markdown format.
-- The Evolution service has access to the most recent agent recipe. 
+- The Evolution service has access to the most recent agent recipe.
+- The Evolution service uses Spec2Code to create modifications to the source code for the agent.
+- After an agent is evolved, it is versioned using the MeshAgent process, and the Agent Owner is notified. If the owner desires, they can use the Agent Provisioning service to add it to the mesh. 
 
 ## Chat-to-API Service
 - Two or more agents can share information via conversation.
