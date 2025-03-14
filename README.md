@@ -18,8 +18,7 @@ Agents can chat with Agent Mesh services. To address the mesh, use terms like "A
 ## Agent Provisioning Service
 All agents have an agent owner who can provision and deprovision their agents. 
 - Example: "Hey mesh, remove my web search agent v1.2.1"
-- The stages that an agent goes through include: Recipe, Initializing, Running, Deflating (active, but no new users), Stopped and Archived. 
-
+- The stages that an agent goes through include: Recipe, Initializing, Running, Deflating (active, but no new users), Stopped and Archived.
 
 ## Agent Catalog Service
 - Example: "Mesh, are there any agents that convert .pptx files to .pdf?"
@@ -64,3 +63,9 @@ The Evolution service clones existing agents and creates codes enhancements to i
 - The agent can translate natural languages to system capabilities. For example, it can accept English commands and translate them into API calls.
 - The agent can recognize if the requests seem nefarious in nature, prevent their actions, return a nasty message, reduce that agents reputation, and potentially tell other agents about the action. 
 - The system can remember the interaction types in the aggregate. It knows which kind of requests are frequently made, which are commonly understood, which are potentially dangerous, and who they are coming from. This data is turned into a small report and made available to the owner of the Custom Agent. 
+
+## AgentMesh UI
+The agentmesh UI is a standard chat interface. 
+  It  accepts text input from the user in a wide section at the bottom, and to the right of that text area is a button that says "Submit". 
+- It checks to see if the text is meant for one of the mesh services; if so, it forwards the text to that mesh service, and listens for a response.
+- The reponse is then displayed on the screen using a markdown widget. 
