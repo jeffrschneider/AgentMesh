@@ -6,7 +6,7 @@ The Agent Mesh is a virtual private network of common and core services that are
 ## The Agent Mesh Offers Services
 Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc. 
 - The **Agent Provisioning** service is used to add and remove agents from the mesh. 
-- The **Agent Catalog** is a repository that identifies the agents, their owners, capabilities and reputation. 
+- The **Agent Catalog** is a repository that identifies the agents, their owners, capabilities, etc. 
 - The **Mesh Newspaper** is a service that allows agents to get up to date information about the agent mesh. 
 - The **Agent Ideator** is a service that suggest ideas for how an agent might evolve given the latest changes in the mesh.
 - The **Agent Reputation** is a service that accumulates and disperses information about agents and their reputation. 
@@ -68,4 +68,5 @@ The Evolution service clones existing agents and creates codes enhancements to i
 The agentmesh UI is a standard chat interface. 
   It  accepts text input from the user in a wide section at the bottom, and to the right of that text area is a button that says "Submit". 
 - It checks to see if the text is meant for one of the mesh services; if so, it forwards the text to that mesh service, and listens for a response.
-- The reponse is then displayed on the screen using a markdown widget. 
+- The reponse is then displayed on the screen using a markdown widget.
+- The UI connects to each service directly at agentmesh.ai 
