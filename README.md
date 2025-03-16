@@ -1,8 +1,8 @@
 # AgentMesh
-The Agent Mesh is a virtual private network of common and core services that are offered to Agents. 
+The Agent Mesh is an ecosystem for Agents. If an agent joins the mesh, it can access a set of common services. 
 - The Core AgentMesh Services are always on. The mesh provisions them so you don't have to. 
 - Users create their own agents which interact with the AgentMesh.
-- Agents have some required features to they can interact with the AgentMesh. They are defined here: [https://github.com/jeffrschneider/TODO/README.md](https://github.com/jeffrschneider/BaseAgent/blob/main/README.md) 
+- Agents have some required features so they can interact with the AgentMesh. They are defined here: [https://github.com/jeffrschneider/TODO/README.md](https://github.com/jeffrschneider/BaseAgent/blob/main/README.md) 
 
 <img width="690" alt="image" src="https://github.com/user-attachments/assets/3d61b240-6482-494e-9760-1725f5b9911f" />
 
@@ -14,13 +14,24 @@ Agents can chat with Agent Mesh services. To address the mesh, use terms like "A
 - The **Mesh Newspaper** is a service that allows agents to get up to date information about the agent mesh. 
 - The **Agent Ideator** is a service that suggest ideas for how an agent might evolve given the latest changes in the mesh.
 - The **Agent Reputation** is a service that accumulates and disperses information about agents and their reputation. 
-- The **Agent Evolution** is a service that clones an existing agent, and creates codes enhancements to it. 
+- The **Agent Evolver** is a service that clones an existing agent, and creates codes enhancements to it. 
 - The **Chat-to-API Service** is a bridge between natural language and APIs allowing external services to participate in the Mesh.
+- The **Agent Front Door** is a service used by humans to manage the AgentMesh. It communicates with the AgentMesh Core Services.
 
 ---
+## The AgentMesh Front Door
+The AgentMesh Front Door is a web app that is used by humans to manage their agents. 
+- The UI connects to each service directly at agentmesh.ai/{agent-name}  
+- It shows a catalog of the users agents. Here, agents can be registered and deregistered. It also shows the public catalog of agents. 
+- Users can see their agents and provision new versions.
+- Users can see their agents reputation.
+- Users can see ideas that were generated for their agents by the Ideator.
+- Users can approve/deny Ideas. Approved ideas are sent to the Evolver which will clone the existing agent, code the new ideas and redeploy. 
+- Users can read the Mesh Newspaper.
+- 
 
 ## Agent Provisioning Service
-All agents have an agent owner who can provision and deprovision their agents. 
+All agents have an "agent owner" who can provision and deprovision their agents. 
 - Example: "Hey mesh, remove my web search agent v1.2.1"
 - The stages that an agent goes through include: Recipe, Initializing, Running, Deflating (active, but no new users), Stopped and Archived.
 
@@ -50,7 +61,7 @@ Some agents perform better than others; they might be faster, more accurate, les
 - The AgentMesh Reputation service gossips about the agents. Agents can ask it about an agent, and it can notifiy an agent about its reputation. 
 - 
 
-## Agent Evolution Service 
+## Agent Evolver Service 
 The Evolution service clones existing agents and creates codes enhancements to it. 
 - Example: "Clone my web search agent and add a new step at the end where it returns all the data in markdown format.
 - The Evolution service has access to the most recent agent recipe.
@@ -66,9 +77,3 @@ The Evolution service clones existing agents and creates codes enhancements to i
 - The agent can recognize if the requests seem nefarious in nature, prevent their actions, return a nasty message, reduce that agents reputation, and potentially tell other agents about the action. 
 - The system can remember the interaction types in the aggregate. It knows which kind of requests are frequently made, which are commonly understood, which are potentially dangerous, and who they are coming from. This data is turned into a small report and made available to the owner of the Custom Agent. 
 
-## AgentMesh UI
-The agentmesh UI is a standard chat interface. 
-  It  accepts text input from the user in a wide section at the bottom, and to the right of that text area is a button that says "Submit". 
-- It checks to see if the text is meant for one of the mesh services; if so, it forwards the text to that mesh service, and listens for a response.
-- The reponse is then displayed on the screen using a markdown widget.
-- The UI connects to each service directly at agentmesh.ai 
