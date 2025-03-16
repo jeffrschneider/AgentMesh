@@ -3,6 +3,9 @@ The Agent Mesh is a virtual private network of common and core services that are
 - The Core AgentMesh Services are always on. The mesh provisions them so you don't have to. 
 - Agents are defined here: https://github.com/jeffrschneider/TODO/README.md
 
+<img width="690" alt="image" src="https://github.com/user-attachments/assets/3d61b240-6482-494e-9760-1725f5b9911f" />
+
+
 ## The Agent Mesh Offers Services
 Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc. 
 - The **Agent Provisioning** service is used to add and remove agents from the mesh. 
