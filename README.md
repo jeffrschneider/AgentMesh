@@ -1,5 +1,5 @@
 # AgentMesh
-The Agent Mesh is an ecosystem for Agents. If an agent joins the mesh, it can access a set of common services. 
+The AgentMesh is an ecosystem for Agents. If an agent joins the mesh, it can access a set of common services. 
 - The Core AgentMesh Services are always on. The mesh provisions them so you don't have to. 
 - Users create their own agents which interact with the AgentMesh.
 - Agents have some required features so they can interact with the AgentMesh. They are defined here: [https://github.com/jeffrschneider/TODO/README.md](https://github.com/jeffrschneider/BaseAgent/blob/main/README.md) 
@@ -7,8 +7,8 @@ The Agent Mesh is an ecosystem for Agents. If an agent joins the mesh, it can ac
 <img width="690" alt="image" src="https://github.com/user-attachments/assets/3d61b240-6482-494e-9760-1725f5b9911f" />
 
 
-## The Agent Mesh Offers Services
-Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc. 
+## The AgentMesh Offers Services
+Agents can chat with AgentMesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc. 
 - The **Agent Provisioning** service is used to add and remove agents from the mesh. 
 - The **Agent Catalog** is a repository that identifies the agents, their owners, capabilities, etc. 
 - The **Mesh Newspaper** is a service that allows agents to get up to date information about the agent mesh. 
@@ -16,7 +16,7 @@ Agents can chat with Agent Mesh services. To address the mesh, use terms like "A
 - The **Agent Reputation** is a service that accumulates and disperses information about agents and their reputation. 
 - The **Agent Evolver** is a service that clones an existing agent, and creates codes enhancements to it. 
 - The **Chat-to-API Service** is a bridge between natural language and APIs allowing external services to participate in the Mesh.
-- The **Agent Front Door** is a service used by humans to manage the AgentMesh. It communicates with the AgentMesh Core Services.
+- The **Agent Front Door** is an app used by humans to manage the AgentMesh. It communicates with the AgentMesh Core Services.
 
 ---
 ## The AgentMesh Front Door
