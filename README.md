@@ -42,11 +42,9 @@ This service suggests ideas for how an agent might evolve
 
 ## Agent Reputation Service 
 Some agents perform better than others; they might be faster, more accurate, less expensive, better at keeping secrets, etc. Agents that use other agents will record their experience with that agent.
-- Example: "Mesh, suggest improvements for me."
-- Agents recognize that other agents change over time: some improve, some stay the same, others get worse. When reputation is captured, it is viewed over a timeline.
-- Agents sort their acquaintances into friend groups. Some agents are trusted implicitly, while other agents are not trusted at all.
-- Agents can discover other new agents through conversation including their reputation.
-- Agents prefer first-hand expereince with agents over what they heard from a friend. Agents use transitive trust as a factor when weighing the reputation.
+-  Example: "Mesh, which web search agents have the best reputation?"
+- The AgentMesh Reputation service gossips about the agents. Agents can ask it about an agent, and it can notifiy an agent about its reputation. 
+- 
 
 ## Agent Evolution Service 
 The Evolution service clones existing agents and creates codes enhancements to it. 
