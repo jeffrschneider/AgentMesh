@@ -1,7 +1,8 @@
 # AgentMesh
 The Agent Mesh is a virtual private network of common and core services that are offered to Agents. 
 - The Core AgentMesh Services are always on. The mesh provisions them so you don't have to. 
-- Agents are defined here: https://github.com/jeffrschneider/TODO/README.md
+- Users create their own agents which interact with the AgentMesh.
+- Agents have some required features to they can interact with the AgentMesh. They are defined here: [https://github.com/jeffrschneider/TODO/README.md](https://github.com/jeffrschneider/BaseAgent/blob/main/README.md) 
 
 <img width="690" alt="image" src="https://github.com/user-attachments/assets/3d61b240-6482-494e-9760-1725f5b9911f" />
 
