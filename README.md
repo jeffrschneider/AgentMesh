@@ -28,7 +28,7 @@ The AgentMesh Front Door is a web app that is used by humans to manage their age
 - Users can see ideas that were generated for their agents by the Ideator.
 - Users can approve/deny Ideas. Approved ideas are sent to the Evolver which will clone the existing agent, code the new ideas and redeploy. 
 - Users can read the Mesh Newspaper.
-- 
+- Users can add to the Agent Specification as a "universal diff". These changes act as the basis for changing the code for the Agent. 
 
 ## Agent Provisioning Service
 All agents have an "agent owner" who can provision and deprovision their agents. 
@@ -65,7 +65,7 @@ Some agents perform better than others; they might be faster, more accurate, les
 The Evolution service clones existing agents and creates codes enhancements to it. 
 - Example: "Clone my web search agent and add a new step at the end where it returns all the data in markdown format.
 - The Evolution service has access to the most recent agent specification and change log.
-- The Evolution service uses Spec2Code to create modifications to the source code for the agent.
+- The Evolution service uses creates modifications to the source code for the agent.
 - After an agent is evolved, it is versioned using the MeshAgent process, and the Agent Owner is notified. If the owner desires, they can use the Agent Provisioning service to add it to the mesh. 
 - The evolver service:
   - scans all of the agent code and identifies files that have changed
