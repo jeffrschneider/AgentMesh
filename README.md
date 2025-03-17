@@ -47,10 +47,10 @@ Agents can get recent information on the mesh. This includes data on new agents,
 - Example: "Yo mesh, what's new?"
 
 ## The Ideator Service 
-This service suggests ideas for how an agent might evolve
+This service suggests ideas for how an agent might evolve. It suggests functional changes to the agent much like a product manager. 
 - Example: "Do you have ideas on how to improve my Homework Grading Agent?
 - The Ideator uses LLMs to think up new ideas on agent evolution.
-- The Ideator can use the NewsPaper service to understand new agents and how they might complement the agent.
+- The Ideator uses the NewsPaper service to understand new agents and how they might complement the agent. It uses the Competitor service to consider feature parity with other solutions. 
 - Ideas from the Ideator are passed back to the Agent Owner who may choose to pass them to the Agent Evolution service.
 - For a given agent, the ideator remembers ideas that it has already suggested and tries not to keep recommending the same idea. It will only do this if it thinks that there's some really new and interesting functionality available in the mesh that wasn't available last time it was recommended.
 - The full spec for Ideator is here: https://github.com/jeffrschneider/AgentMesh/blob/main/Ideator/spec.md 
