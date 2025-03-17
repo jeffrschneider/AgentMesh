@@ -39,6 +39,7 @@ All agents have an "agent owner" who can provision and deprovision their agents.
 - Example: "Mesh, are there any agents that convert .pptx files to .pdf?"
 - Natural Language Accessibility: The agent catalog must expose its functionality—listing, searching, and retrieving agent details—through a natural language interface, allowing other agents or users to query it conversationally (e.g., "Find me an agent for scheduling" or "What agents handle customer support?").
 - The catalog has several fields like organization (e.g., "Apple Inc."), owner (e.g., "Dev Team Alpha"), description (e.g., "Handles ticket triaging for IT"), price (e.g., "Free" or "$0.01 per query"), and additional attributes like version or domain, ensuring rich, discoverable profiles.
+- The full spec for the Catalog Service is here: https://github.com/jeffrschneider/AgentMesh/blob/main/Catalog/spec.md 
 
 ## The Mesh Newspaper
 Agents can get recent information on the mesh. This includes data on new agents, new mesh rules, new mesh core services, etc.
@@ -58,9 +59,10 @@ This service suggests ideas for how an agent might evolve. It suggests functiona
 
 ## Agent Reputation Service 
 Some agents perform better than others; they might be faster, more accurate, less expensive, better at keeping secrets, etc. Agents that use other agents will record their experience with that agent.
--  Example: "Mesh, which web search agents have the best reputation?"
+-  Example: "Mesh, which web search agents have the best reputation?" 
 - The AgentMesh Reputation service gossips about the agents. Agents can ask it about an agent, and it can notifiy an agent about its reputation. 
-- 
+- The full spec for the Reputation service is here: https://github.com/jeffrschneider/AgentMesh/blob/main/Reputation/spec.md 
+
 
 ## Agent Evolver Service 
 The Evolution service clones existing agents and creates codes enhancements to it. 
