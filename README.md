@@ -64,9 +64,18 @@ Some agents perform better than others; they might be faster, more accurate, les
 ## Agent Evolver Service 
 The Evolution service clones existing agents and creates codes enhancements to it. 
 - Example: "Clone my web search agent and add a new step at the end where it returns all the data in markdown format.
-- The Evolution service has access to the most recent agent recipe.
+- The Evolution service has access to the most recent agent specification and change log.
 - The Evolution service uses Spec2Code to create modifications to the source code for the agent.
 - After an agent is evolved, it is versioned using the MeshAgent process, and the Agent Owner is notified. If the owner desires, they can use the Agent Provisioning service to add it to the mesh. 
+- The evolver service:
+  - scans all of the agent code and identifies files that have changed
+  - creates a markdown description
+  - records the interfaces it offers to other parties: UI, API, sockets, sync vs async, streams, auth, etc.
+  - records source code info including programming language, lines of code, and approximate token count (for LLMs). 
+  - records the the key architectural and design choices; the clouds, geo, etc), the key platforms it uses (DBs), specific libraries used, etc.
+- The script saves the results to temp files in the same directory, overwriting the previous version. 
+- It can communicate none, some or all of its capabilities and structure to another party. These rules are defined in the "Communication Rules" section.
+
 
 ## Chat-to-API Service
 - Two or more agents can share information via conversation.
