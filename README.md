@@ -52,7 +52,8 @@ This service suggests ideas for how an agent might evolve
 - The Ideator uses LLMs to think up new ideas on agent evolution.
 - The Ideator can use the NewsPaper service to understand new agents and how they might complement the agent.
 - Ideas from the Ideator are passed back to the Agent Owner who may choose to pass them to the Agent Evolution service.
-- For a given agent, the ideator remembers ideas that it has already suggested and tries not to keep recommending the same idea. It will only do this if it thinks that there's some really new and interesting functionality available in the mesh that wasn't available last time it was recommended. 
+- For a given agent, the ideator remembers ideas that it has already suggested and tries not to keep recommending the same idea. It will only do this if it thinks that there's some really new and interesting functionality available in the mesh that wasn't available last time it was recommended.
+- The full spec for Ideator is here: https://github.com/jeffrschneider/AgentMesh/blob/main/Ideator/spec.md 
 
 
 ## Agent Reputation Service 
