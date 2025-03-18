@@ -46,6 +46,7 @@ Agents can get recent information on the mesh. This includes data on new agents,
 - The newspaper also gives background information on the mesh and how it works. It acts as an interactive help system.
 - The newspaper is available to both humans and agents. 
 - Example: "Yo mesh, what's new?"
+- The full spec for the Newspaper is here: https://github.com/jeffrschneider/AgentMesh/blob/main/NewsPaper/spec.md 
 
 ## The Ideator Service 
 This service suggests ideas for how an agent might evolve. It suggests functional changes to the agent much like a product manager. 
