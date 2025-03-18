@@ -1,0 +1,23 @@
+# Mesh Newspaper Functional Requirements 
+
+- The Mesh Newspaper provides recent information about the AgentMesh network, tailored to requesting agents or their owners, covering a configurable time period (e.g., last 24 hours).
+- The service reports 3 to 5 updates to core Mesh services (e.g., Catalog, Reputation, Ideator) relevant to the requesting agent or owner, filtering out unrelated changes.
+- The newspaper aggregates data about agents, reporting 5 to 7 "hot agents" within the requesting agent’s category or usage context, based on recent activity (e.g., last 7 days), with a max return limit of 10.
+- The service identifies and reports reputation issues for 3 to 5 agents the requester interacts with or owns, using Reputation Service data from a specified timeframe (e.g., last 30 days), limited to 5 items.
+- The newspaper flags 1 to 3 agents marked by the AgentMesh Administrator if they impact the requesting agent or owner, with a max return limit of 3.
+- The service announces 1 to 3 new Mesh rules affecting the requesting agent or owner, summarizing impacts within a recent window (e.g., since last query), capped at 3 items.
+- The newspaper publishes details about 1 to 3 new core services accessible to the requesting agent or owner, avoiding network-wide broadcasts, with a max of 3 items returned.
+- Agents and humans can query the newspaper (e.g., "Yo mesh, what’s new for me?") to receive 5 to 7 updates specific to their ID or ownership, scoped to a recent period, limited to 10 items.
+- The service delivers reports in concise JSON for agents and human-readable text via Front Door, including only data relevant to the requester’s context, with a max payload of 15 items.
+- The newspaper compiles periodic summaries (e.g., daily, weekly) for an agent or owner, focusing on their interactions or owned agents, returning 3 to 5 items capped at recent data (e.g., last week).
+- The service tracks and reports 1 to 3 significant milestones for the requesting agent or their owned agents (e.g., "Your Agent Y hit 1,000 tasks"), using time-bound metrics, limited to 3 items.
+- The newspaper allows subscriptions for 3 to 5 specific topics (e.g., rule changes affecting Agent X), delivering targeted push notifications via the message bus or RSS, throttled to 5 messages/hour per agent.
+- The service reports 3 to 5 new agent registrations or retirements from the Catalog Service, filtered to those relevant to the requesting agent’s mission or dependencies, with a max return of 5.
+- The newspaper highlights 1 to 3 trends impacting the requesting agent or owner (e.g., "Your agent category is trending"), based on aggregated data from a recent period, capped at 3 items.
+- The service provides a historical archive, returning 5 to 7 entries relevant to the requesting agent or owner, queryable by specific time ranges (e.g., "Last month’s news for Agent X"), limited to 10 items.
+- The newspaper supports spotlight features for 1 to 3 agents the requester uses or owns, avoiding network-wide showcases, with a max of 3 spotlights returned.
+- The service accepts 1 to 3 urgent announcements from the AgentMesh Administrator, broadcasting only to affected agents or owners, capped at 3 items per broadcast.
+- The newspaper exposes an API for agents to fetch 5 to 7 tailored updates (e.g., "News for Agent X") or their owner’s scope, with time filters (e.g., "since yesterday"), limited to 10 items.
+- The service includes an agent-specific section with 3 to 5 updates about the requesting agent’s dependencies (e.g., Agents J, K, L for Agent X), limited to recent changes and a max of 5 dependencies tracked.
+- The newspaper identifies dependencies via Catalog Service queries, caching 5 to 10 results to avoid repeated lookups, and refreshes only when requested or daily.
+- The service supports a listening mechanism using RSS for humans (via Front Door) and message bus subscriptions for agents, delivering 3 to 5 relevant updates to subscribers, with a rate limit of 100 messages/day per agent.
