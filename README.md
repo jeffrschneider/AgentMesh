@@ -1,6 +1,6 @@
 # AgentMesh
 The AgentMesh is an ecosystem for Agents. If an agent joins the mesh, it can access a set of common services. 
-- The Core AgentMesh Services are always on. The mesh provisions them so you don't have to. 
+- The Core AgentMesh Services are meant to be running at all times. 
 - Users create their own agents which interact with the AgentMesh.
 - Agents have some required features so they can interact with the AgentMesh. They are defined here: [BaseAgent Requirements](https://github.com/jeffrschneider/BaseAgent/blob/main/README.md) 
 
